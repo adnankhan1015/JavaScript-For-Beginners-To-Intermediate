@@ -49,6 +49,8 @@ console.log(obj)
 let num = 10
 function increaseNumber(num) {
     num++
+    // console.log(num)
 }
+
 increaseNumber(num)
 console.log(num)
