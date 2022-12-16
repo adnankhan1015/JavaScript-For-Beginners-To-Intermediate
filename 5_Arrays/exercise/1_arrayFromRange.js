@@ -79,3 +79,39 @@ function countOccurrences(array, searchElement) {
 }
 
 console.log(">>", countOccurrences(numbersArray, 2));
+
+// ! Practice the countOccurrences using reduce method
+
+// ! Get Max
+
+// ? Create a function getMax we give it an array of numbers and returns the largest number in that array
+
+function getMax(numbersArray) {
+  // check if array is empty or not
+  if (numbersArray.length === 0) return undefined;
+
+  let max = numbersArray[0];
+
+  for (let i = 1; i < numbersArray.length; i++) {
+    if (numbersArray[i] > max) {
+      max = numbersArray[i];
+    }
+  }
+  return max;
+}
+
+console.log(getMax(numbersArray));
+
+// ! Practice the getMax using reduce method
+
+const movies = [
+  { title: "a", year: 2020, ratting: 4.5 },
+  { title: "b", year: 2020, ratting: 4.7 },
+  { title: "c", year: 2020, ratting: 3 },
+  { title: "d", year: 2021, ratting: 4.5 },
+];
+
+// ? All the movies in 2021 with ratting > 4
+// ? Sort them by their rating
+// ? Descending Order
+// ? Pick their title 'a' 'b'
