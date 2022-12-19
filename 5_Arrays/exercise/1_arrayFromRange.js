@@ -61,7 +61,7 @@ function move(array, index, offset) {
 const numbers = [1, 2, 3, 4];
 // console.log(numbers);
 const output = move(numbers, 1, 2);
-console.log("output >>>", output);
+// console.log("output >>>", output);
 
 // ! Count Occurrences
 
@@ -78,7 +78,7 @@ function countOccurrences(array, searchElement) {
   return count;
 }
 
-console.log(">>", countOccurrences(numbersArray, 2));
+// console.log(">>", countOccurrences(numbersArray, 2));
 
 // ! Practice the countOccurrences using reduce method
 
@@ -100,7 +100,7 @@ function getMax(numbersArray) {
   return max;
 }
 
-console.log(getMax(numbersArray));
+// console.log(getMax(numbersArray));
 
 // ! Practice the getMax using reduce method
 
@@ -115,3 +115,13 @@ const movies = [
 // ? Sort them by their rating
 // ? Descending Order
 // ? Pick their title 'a' 'b'
+
+const titles = movies
+  .filter((m) => m.year === 2020 && m.ratting >= 4)
+  .sort((a, b) => a.ratting - b.ratting)
+  .reverse()
+  .map((m) => m.title);
+
+// 4.5 4.7 == 0.2 => -1
+
+console.log(">>", titles);
